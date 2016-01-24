@@ -2,7 +2,7 @@
 
 This is a theme for JSON Resume in french. It is available via npm:
 ```
-npm install jsonresume-theme-stackoverflow
+npm install jsonresume-theme-depassementdepile
 ```
 [DEMO](https://themes.jsonresume.org/depassementdepile)
 
@@ -18,7 +18,7 @@ To have a social icon close the social link profile (or username) it is enough t
 
 #### Support to extra fields
 
-With stackowerflow theme it is possible to add:
+With depassementdepile theme it is possible to add:
 
 - `keywords` to each 'work', 'publication' and 'volunteer' item
 - `summary`to each 'interests' and 'education' item

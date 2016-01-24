@@ -41,15 +41,15 @@ Handlebars.registerHelper('spaceToDash', function(str) {
 
 Handlebars.registerHelper('MY', function(date) {
 	var d = date.toString();
-	return moment(d).format('MMMM YYYY');
+	return moment(d).locale("fr").format('MMMM YYYY');
 });
 
 Handlebars.registerHelper('Y', function(date) {
 	var d = date.toString();
-  return moment(d).format('YYYY');
+  return moment(d).locale("fr").format('YYYY');
 });
 
 Handlebars.registerHelper('DMY', function(date) {
 	var d = date.toString();
-  return moment(d).format('D MMMM YYYY');
+  return moment(d).locale("fr").format('D MMMM YYYY');
 });
