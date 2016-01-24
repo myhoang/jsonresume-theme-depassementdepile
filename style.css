@@ -109,7 +109,7 @@ strong {
 }
 
 /* main container */
-#resume {
+.main.wrapper {
     padding: 1rem;
     margin-top: 2rem;
 }
@@ -125,19 +125,19 @@ section .location {
     font-weight: 700;
 }
 
-#contact {
+.contacts {
     margin-top: .5rem;
 }
 
-#profiles .item {
+.profiles .item {
     padding: 0;
 }
 
-#header > #profiles,
-#header > #contact,
-#skills,
-#languages,
-#interests {
+.header > .profiles,
+.header > .contacts,
+.skills,
+.languages,
+.interests {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -149,27 +149,27 @@ section .location {
     justify-content: flex-start;
 }
 
-#header > div {
+.header > div {
     line-height: 1.5;
 }
 
-#header > div > div {
+.header > div > div {
     margin-right: 1.2em;
 }
 
-#header h1.name {
+.header h1.name {
     font-size: 2.8rem;
     font-weight: 100;
     line-height: 100%;
 }
 
-#header h2.label {
+.header h2.label {
     color: #202931;
     font-size: 1.47rem;
     font-weight: 300;
 }
 
-#header .picture {
+.header .picture {
     width: 11em;
     float: right;
     border-radius: 4px;
@@ -264,7 +264,7 @@ h2.section-title {
 .institution::before,
 .organization::before,
 .awarder::before {
-    content: "at"
+    content: "chez"
 }
 
 .company,
@@ -389,19 +389,19 @@ ul.courses li:hover {
     height: 40%;
 }
 
-#languages .item,
-#skills .item,
-#interests .item {
+.languages .item,
+.skills .item,
+.interests .item {
     width: 15em;
     padding: 0 .5em .5em 0;
     border-bottom: none;
 }
 
-#skills .item {
+.skills .item {
     width: 16em;
 }
 
-#skills .item .keywords {
+.skills .item .keywords {
     width: 15em;
 }
 
@@ -427,29 +427,29 @@ ul.courses li:hover {
     height: 5px;
 }
 
-.level.beginner .bar::after {
-    background: #EB5F51;
+.level.débutant .bar::after {
+    background: #5CB85C;
     width: 2.5em;
 }
 
-.level.intermediate .bar::after {
-    background: #ffdf1f;
+.level.intermédiaire .bar::after {
+    background: #5CB85C;
     width: 5em;
 }
 
-.level.advanced .bar::after,
-.level.fluent .bar::after {
+.level.avancé .bar::after,
+.level.courant .bar::after {
     background: #5CB85C;
     width: 7.5em;
 }
 
-.level.master .bar::after,
-.level.native.speaker .bar::after {
-    background: #59C596;
+.level.expert .bar::after,
+.level.langue.maternelle .bar::after {
+    background: #5CB85C;
     width: 10em;
 }
 
-#references .item {
+.references .item {
     padding-left: .5em;
     border-left: 5px solid #ff6d1f;
 }
@@ -477,7 +477,7 @@ ul.courses li:hover {
 *		TABLET
 ****************/
 @media screen and (min-width: 602px) {
-    #resume {
+    .main.wrapper {
         width: 80%;
         margin: 0 auto;
     }
@@ -491,7 +491,7 @@ ul.courses li:hover {
         margin-left: 1.5em;
     }
 
-    #resume {
+    .main.wrapper {
         width: 820px;
         margin: 2rem auto;
         opacity: 0;
@@ -513,6 +513,20 @@ ul.courses li:hover {
     .organization::before,
     .awarder::before {
         content: "|";
+    }
+
+    .works header {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
     }
 
     .header-left {
@@ -538,7 +552,7 @@ ul.courses li:hover {
 
 @media print {
 
-    #resume {
+    .main.wrapper {
         margin: 0;
         padding: 0;
         -ms-word-wrap: break-word;
@@ -559,7 +573,7 @@ ul.courses li:hover {
     .institution::before,
     .organization::before,
     .awarder::before {
-        content: "at";
+        content: "chez";
     }
 
     .main-summary {
@@ -615,10 +629,10 @@ ul.courses li:hover {
     }
 
     ul.keywords::before {
-        content: "Skills acquired: ";
+        content: "Compétences acquises: ";
     }
 
-    #skills .keywords::before {
+    .skills .keywords::before {
         content: '';
     }
 
@@ -628,7 +642,7 @@ ul.courses li:hover {
     }
 
     ul.courses::before {
-        content: "Major courses: ";
+        content: "Cours: ";
     }
 
     ul.keywords li:last-of-type::after,
@@ -645,7 +659,7 @@ ul.courses li:hover {
         display: none;
     }
 
-    #profiles .item {
+    .profiles .item {
         padding: 0;
     }
 

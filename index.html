@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-		<title>Francesco Esposito</title>
+		<title>My Hoang</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 		<style>
 			/********************************************
@@ -118,7 +118,7 @@ strong {
 }
 
 /* main container */
-#resume {
+.main.wrapper {
     padding: 1rem;
     margin-top: 2rem;
 }
@@ -134,19 +134,19 @@ section .location {
     font-weight: 700;
 }
 
-#contact {
+.contacts {
     margin-top: .5rem;
 }
 
-#profiles .item {
+.profiles .item {
     padding: 0;
 }
 
-#header > #profiles,
-#header > #contact,
-#skills,
-#languages,
-#interests {
+.header > .profiles,
+.header > .contacts,
+.skills,
+.languages,
+.interests {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -158,27 +158,27 @@ section .location {
     justify-content: flex-start;
 }
 
-#header > div {
+.header > div {
     line-height: 1.5;
 }
 
-#header > div > div {
+.header > div > div {
     margin-right: 1.2em;
 }
 
-#header h1.name {
+.header h1.name {
     font-size: 2.8rem;
     font-weight: 100;
     line-height: 100%;
 }
 
-#header h2.label {
+.header h2.label {
     color: #202931;
     font-size: 1.47rem;
     font-weight: 300;
 }
 
-#header .picture {
+.header .picture {
     width: 11em;
     float: right;
     border-radius: 4px;
@@ -273,7 +273,7 @@ h2.section-title {
 .institution::before,
 .organization::before,
 .awarder::before {
-    content: "at"
+    content: "chez"
 }
 
 .company,
@@ -398,19 +398,19 @@ ul.courses li:hover {
     height: 40%;
 }
 
-#languages .item,
-#skills .item,
-#interests .item {
+.languages .item,
+.skills .item,
+.interests .item {
     width: 15em;
     padding: 0 .5em .5em 0;
     border-bottom: none;
 }
 
-#skills .item {
+.skills .item {
     width: 16em;
 }
 
-#skills .item .keywords {
+.skills .item .keywords {
     width: 15em;
 }
 
@@ -436,29 +436,29 @@ ul.courses li:hover {
     height: 5px;
 }
 
-.level.beginner .bar::after {
-    background: #EB5F51;
+.level.débutant .bar::after {
+    background: #5CB85C;
     width: 2.5em;
 }
 
-.level.intermediate .bar::after {
-    background: #ffdf1f;
+.level.intermédiaire .bar::after {
+    background: #5CB85C;
     width: 5em;
 }
 
-.level.advanced .bar::after,
-.level.fluent .bar::after {
+.level.avancé .bar::after,
+.level.courant .bar::after {
     background: #5CB85C;
     width: 7.5em;
 }
 
-.level.master .bar::after,
-.level.native.speaker .bar::after {
-    background: #59C596;
+.level.expert .bar::after,
+.level.langue.maternelle .bar::after {
+    background: #5CB85C;
     width: 10em;
 }
 
-#references .item {
+.references .item {
     padding-left: .5em;
     border-left: 5px solid #ff6d1f;
 }
@@ -486,7 +486,7 @@ ul.courses li:hover {
 *		TABLET
 ****************/
 @media screen and (min-width: 602px) {
-    #resume {
+    .main.wrapper {
         width: 80%;
         margin: 0 auto;
     }
@@ -500,7 +500,7 @@ ul.courses li:hover {
         margin-left: 1.5em;
     }
 
-    #resume {
+    .main.wrapper {
         width: 820px;
         margin: 2rem auto;
         opacity: 0;
@@ -522,6 +522,20 @@ ul.courses li:hover {
     .organization::before,
     .awarder::before {
         content: "|";
+    }
+
+    .works header {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
     }
 
     .header-left {
@@ -547,7 +561,7 @@ ul.courses li:hover {
 
 @media print {
 
-    #resume {
+    .main.wrapper {
         margin: 0;
         padding: 0;
         -ms-word-wrap: break-word;
@@ -568,7 +582,7 @@ ul.courses li:hover {
     .institution::before,
     .organization::before,
     .awarder::before {
-        content: "at";
+        content: "chez";
     }
 
     .main-summary {
@@ -624,10 +638,10 @@ ul.courses li:hover {
     }
 
     ul.keywords::before {
-        content: "Skills acquired: ";
+        content: "Compétences acquises: ";
     }
 
-    #skills .keywords::before {
+    .skills .keywords::before {
         content: '';
     }
 
@@ -637,7 +651,7 @@ ul.courses li:hover {
     }
 
     ul.courses::before {
-        content: "Major courses: ";
+        content: "Cours: ";
     }
 
     ul.keywords li:last-of-type::after,
@@ -654,7 +668,7 @@ ul.courses li:hover {
         display: none;
     }
 
-    #profiles .item {
+    .profiles .item {
         padding: 0;
     }
 
@@ -668,158 +682,124 @@ ul.courses li:hover {
 	</head>
 
 	<body>
-		<div id="resume">
-				<header id="header" class="clear">
-						<div>
-							<h1 class="name">Francesco Esposito</h1>
-							<h2 class="label">Front End Software Engineer</h2>
+		<div id="resume" class="main wrapper">
+				<header id="header" class="clear header">
+						<img class="picture" src="pro.jpg" alt="My Hoang"/>
+						<div class="middle">
+							<h1 class="name">My Hoang</h1>
+							<h2 class="label">Ingénieur développeur - Scrum Master</h2>
 						</div>
 
 						<span class="location">
+								<span class="address">
+									3 allée Edouard Branly,
+								</span>
+								<span class="postalCode">
+									77420,
+								</span>
 								<span class="city">
-									Zürich,
+									Champs-sur-Marne,
 								</span>
 								<span class="region">
-									Switzerland
+									Île-de-France
+								</span>
+								<span class="countryCode">
+									FR
 								</span>
 						</span>
 
-                    <div>born in Salerno, Italy in 1986</div>
+                    <div>Né à ,  le </div>
 
 
-					<div id="contact">
-						<div class="website">
-              <span class="fa fa-external-link"></span>
-							<a target="_blank" href="http://fran.cesco.io">http://fran.cesco.io</a>
-						</div>
+					<div id="contact" class="contacts ">
 						<div class="email">
               <span class="fa fa-envelope-o"></span>
-							<a href="mailto:fran@cesco.io">fran@cesco.io</a>
+							<a href="mailto:my.hoang.fr@gmail.com">my.hoang.fr@gmail.com</a>
 						</div>
 						<div class="phone">
               <span class="fa fa-mobile"></span>
-							(+41) 77 98 212 54
+							+33 6 29 49 98 24
 						</div>
 					</div>
 
-					<div id="profiles">
-						<div class="item">
-								<div class="username">
-									<span class="fa fa-linkedin linkedin social"></span>
-									<span class="url">
-										<a href="https://ch.linkedin.com/in/francescoes">francescoes</a>
-									</span>
-								</div>
-						</div>
-						<div class="item">
-								<div class="username">
-									<span class="fa fa-github github social"></span>
-									<span class="url">
-										<a href="https://www.github.com/francescoes">francescoes</a>
-									</span>
-								</div>
-						</div>
-						<div class="item">
-								<div class="username">
-									<span class="fa fa-stack-overflow stack-overflow social"></span>
-									<span class="url">
-										<a href="https://stackoverflow.com/users/4457937/francesco-es?tab=profile">francesco-es</a>
-									</span>
-								</div>
-						</div>
-					</div>
 				</header>
 
-					<section class="section main-summary">
-						<section>
-							<div><p>Francesco Esposito is a computer scientist, passionate about Web Development and currently focused on the Front-end, particularly JavaScript.</p><p>Semantic Web and Data Integration are two of the topics that trigger his interest. </p><p>When not working or coding, he enjoys to experiment in Mediterranean cuisine and reading books about Psychology.</p></div>
-						</section>
-					</section>
 
 				<section class="section margin1">
 					<header>
-						<h2 class='section-title'>Skills</h2>
+						<h2 class='section-title'>Compétences</h2>
 					</header>
-					<section id="skills">
+					<section id="skills" class="skills ">
 						<div class="item">
 							<h3 class="name">
-								Front-end Development
+								Méthodes agiles
 							</h3>
-							<div class="level advanced">
-								<em>Advanced</em>
-								<div class="bar"></div>
-							</div>
 							<ul class="keywords">
-								<li>Javascript</li>
-								<li>jQuery</li>
-								<li>Angularjs</li>
-								<li>HTML5</li>
-								<li>CSS3</li>
-								<li>Semantic UI</li>
-								<li>Jekyll</li>
-								<li>Handlebars</li>
-								<li>Semantic UI</li>
-								<li>Jasmine</li>
-								<li>Karma</li>
+								<li>Scrum</li>
+								<li>XP Programming</li>
+								<li>Kanban</li>
 							</ul>
 						</div>
 						<div class="item">
 							<h3 class="name">
-								Back-end Development
+								Pratiques d&#x27;ingienerie
 							</h3>
-							<div class="level intermediate">
-								<em>Intermediate</em>
-								<div class="bar"></div>
-							</div>
 							<ul class="keywords">
-								<li>Python</li>
-								<li>C#</li>
+								<li>Validation logicielle</li>
+								<li>Intégration continue</li>
+								<li>Qualimétrie logicielle</li>
+							</ul>
+						</div>
+						<div class="item">
+							<h3 class="name">
+								Génie logiciel
+							</h3>
+							<ul class="keywords">
+								<li>Conception orientée objet</li>
+								<li>Design Patterns</li>
+								<li>Modélisation UML</li>
+							</ul>
+						</div>
+						<div class="item">
+							<h3 class="name">
+								Univers Java
+							</h3>
+							<ul class="keywords">
+								<li>Java SE</li>
+								<li>Eclipse</li>
+								<li>Ant</li>
+								<li>JUnit</li>
+								<li>Swing</li>
+								<li>Java EE</li>
+							</ul>
+						</div>
+						<div class="item">
+							<h3 class="name">
+								Outils
+							</h3>
+							<ul class="keywords">
+								<li>Git</li>
+								<li>Jenkins</li>
+								<li>CMake</li>
+								<li>Jira</li>
+								<li>Valgrind</li>
+								<li>SonarQube</li>
+							</ul>
+						</div>
+						<div class="item">
+							<h3 class="name">
+								Langages de programmation
+							</h3>
+							<ul class="keywords">
 								<li>Java</li>
-								<li>PHP Laravel</li>
-								<li>Ruby on Rails</li>
-							</ul>
-						</div>
-						<div class="item">
-							<h3 class="name">
-								Other
-							</h3>
-							<div class="level advanced">
-								<em>Advanced</em>
-								<div class="bar"></div>
-							</div>
-							<ul class="keywords">
-								<li>XSLT</li>
-								<li>Web Scraping</li>
-								<li>Data Integration</li>
-								<li>REST</li>
-							</ul>
-						</div>
-						<div class="item">
-							<h3 class="name">
-								GIT
-							</h3>
-							<div class="level advanced">
-								<em>Advanced</em>
-								<div class="bar"></div>
-							</div>
-							<ul class="keywords">
-								<li>Github</li>
-								<li>BitBucket</li>
-								<li>Git flow</li>
-							</ul>
-						</div>
-						<div class="item">
-							<h3 class="name">
-								Semantic Web
-							</h3>
-							<div class="level intermediate">
-								<em>Intermediate</em>
-								<div class="bar"></div>
-							</div>
-							<ul class="keywords">
-								<li>Microdata</li>
-								<li>RDF</li>
-								<li>RDFa</li>
+								<li>C/C++</li>
+								<li>Ada</li>
+								<li>Shellscript</li>
+								<li>Ruby</li>
+								<li>Python</li>
+								<li>R (data mining)</li>
+								<li>PHP</li>
+								<li>Golang</li>
 							</ul>
 						</div>
 					</section>
@@ -827,212 +807,250 @@ ul.courses li:hover {
 
 				<section class="section">
 					<header>
-						<h2 class='section-title'>Work Experience <span class="item-count">(4)</span></h2>
+						<h2 class='section-title'>Expérience professionnelle <span class="item-count">(7)</span></h2>
 					</header>
-					<section id="work">
+					<section id="work" class="works">
 								<header>
-									<span class="space-left">
-											<span class="fa fa-caret-down"></span>
-									</span>
-									<div class="position">
-										Front End Software Engineer
-									</div>
-									<div class="company">
-										F&amp;P Personal Robotics
-									</div>
-									<div class="date">
-										<span class="startDate">
-											July 2015
-										</span>
-										<span class="endDate">
-											- Current
-										</span>
-									</div>
+                                    <div>
+    									<span class="space-left">
+    											<span class="fa fa-caret-down"></span>
+    									</span>
+    									<div class="position">
+    										Développeur / Scrum Master
+    									</div>
+    									<div class="company">
+    										Thales Comminications &amp; Security
+    									</div>
+                                    </div>
+
+                                    <div>
+    									<div class="date">
+    										<span class="startDate">
+    											August 2012
+    										</span>
+    										<span class="endDate">
+    											- Présent
+    										</span>
+    									</div>
+                                    <div>
 								</header>
 
-                                <span class="location">
-                                    <span class="fa fa-map-marker"></span>
-                                    <span class="city">
-                                        Zürich,
-                                    </span>
-                                    <span class="region">
-                                      Switzerland
-                                    </span>
-                                </span>
-                                <span class="website">
-                                    <a href="http://www.fp-robotics.com">http://www.fp-robotics.com</a>
-                                </span>
 
-								<ul class="keywords">
-									<li>JavaScript</li>
-									<li>jQuery</li>
-									<li>Sockjs</li>
-									<li>HTML5</li>
-									<li>CSS3</li>
-									<li>Python</li>
-								</ul>
 
 								<div class="item display" style="opacity:1">
 									<div class="summary">
-										<p>Creation of an easy-to-use User Interface for Robots, aimed to collaborate with humans in daily tasks.</p>
+										<p>Ingénierie pour des projets de radio logicielle au sein d&#x27;équipes agiles et Scrum Master</p>
 									</div>
 									<ul class="highlights">
-											<li>Collaboration with Graphics Designers to translate and integrate beautiful design into code.</li>
-											<li>Working together with Back End developers in the development of new features.</li>
+											<li>Spécification, conception, tests, codage de récits fonctionnels (mise en œuvre des livrables client) et de récits métiers</li>
+											<li>&quot;Scrum Master&quot; : responsable de la compréhension, de l&#x27;adhésion et de la mise en œuvre des méthodes agiles</li>
 									</ul>
 							</div>
 								<header>
-									<span class="space-left">
-											<span class="fa fa-caret-right"></span>
-									</span>
-									<div class="position">
-										Software Engineer
-									</div>
-									<div class="company">
-										YouRehab AG
-									</div>
-									<div class="date">
-										<span class="startDate">
-											September 2014
-										</span>
-										<span class="endDate">
-											- June 2015
-										</span>
-									</div>
+                                    <div>
+    									<span class="space-left">
+    											<span class="fa fa-caret-right"></span>
+    									</span>
+    									<div class="position">
+    										Développeur
+    									</div>
+    									<div class="company">
+    										Thales Avionics
+    									</div>
+                                    </div>
+
+                                    <div>
+    									<div class="date">
+    										<span class="startDate">
+    											January 2012
+    										</span>
+    										<span class="endDate">
+    											- July 2012
+    										</span>
+    									</div>
+                                    <div>
 								</header>
 
-                                <span class="location">
-                                    <span class="fa fa-map-marker"></span>
-                                    <span class="city">
-                                        Zürich,
-                                    </span>
-                                    <span class="region">
-                                      Switzerland
-                                    </span>
-                                </span>
-                                <span class="website">
-                                    <a href="http://www.yourehab.com">http://www.yourehab.com</a>
-                                </span>
 
-								<ul class="keywords">
-									<li>JavaScript</li>
-									<li>jQuery</li>
-									<li>Angularjs</li>
-									<li>C#</li>
-									<li>PHP</li>
-									<li>Ruby on Rails</li>
-									<li>HTML5</li>
-									<li>CSS3</li>
-									<li>XSLT</li>
-								</ul>
 
 								<div class="item display none" style="opacity:0">
 									<div class="summary">
-										<p>Development of a Software that helps the creation and the management of interactive rehabilitation plans for patients with sensory-motor and cognitive impairments.</p>
+										<p>Ingénierie pour une gamme de logiciels de contrôle du trafic aérien</p>
 									</div>
 									<ul class="highlights">
-											<li>Remote technical customer support for European clients.</li>
-											<li>Design, development and maintenance of the major product of the company. Bug fixing, reporting and tracking.</li>
+											<li>Spécification fonctionnelle, conception détaillée </li>
+											<li>Codage, tests (unitaires, de validation)</li>
 									</ul>
 							</div>
 								<header>
-									<span class="space-left">
-											<span class="fa fa-caret-right"></span>
-									</span>
-									<div class="position">
-										Software Engineer Intern
-									</div>
-									<div class="company">
-										YouRehab AG
-									</div>
-									<div class="date">
-										<span class="startDate">
-											March 2014
-										</span>
-										<span class="endDate">
-											- July 2014
-										</span>
-									</div>
+                                    <div>
+    									<span class="space-left">
+    											<span class="fa fa-caret-right"></span>
+    									</span>
+    									<div class="position">
+    										Développeur
+    									</div>
+    									<div class="company">
+    										Thales Rail Signalling Solutions
+    									</div>
+                                    </div>
+
+                                    <div>
+    									<div class="date">
+    										<span class="startDate">
+    											June 2010
+    										</span>
+    										<span class="endDate">
+    											- December 2011
+    										</span>
+    									</div>
+                                    <div>
 								</header>
 
-                                <span class="location">
-                                    <span class="fa fa-map-marker"></span>
-                                    <span class="city">
-                                        Zürich,
-                                    </span>
-                                    <span class="region">
-                                      Switzerland
-                                    </span>
-                                </span>
-                                <span class="website">
-                                    <a href="http://www.yourehab.com">http://www.yourehab.com</a>
-                                </span>
 
-								<ul class="keywords">
-									<li>JavaScript</li>
-									<li>d3js</li>
-									<li>C#</li>
-									<li>PHP</li>
-									<li>HTML5</li>
-									<li>CSS3</li>
-								</ul>
 
 								<div class="item display none" style="opacity:0">
 									<div class="summary">
-										<p>Analysis and Visualisation of raw data concerning patient&#x27;s rehabilitation history.</p>
+										<p>Ingénierie au sein d&#x27;un projet ferroviaire, projet Safety Integrity Level (SIL) 4</p>
 									</div>
 									<ul class="highlights">
-											<li>Research activity about Data Visualization techniques.</li>
+											<li>      Validation du programme médiateur</li>
+											<li>     Formateur sur la validation logicielle</li>
 									</ul>
 							</div>
 								<header>
-									<span class="space-left">
-											<span class="fa fa-caret-right"></span>
-									</span>
-									<div class="position">
-										Junior Web Developer
-									</div>
-									<div class="company">
-										BV Network
-									</div>
-									<div class="date">
-										<span class="startDate">
-											January 2011
-										</span>
-										<span class="endDate">
-											- December 2011
-										</span>
-									</div>
+                                    <div>
+    									<span class="space-left">
+    											<span class="fa fa-caret-right"></span>
+    									</span>
+    									<div class="position">
+    										Développeur
+    									</div>
+    									<div class="company">
+    										Thales Comminications &amp; Security
+    									</div>
+                                    </div>
+
+                                    <div>
+    									<div class="date">
+    										<span class="startDate">
+    											September 2007
+    										</span>
+    										<span class="endDate">
+    											- May 2010
+    										</span>
+    									</div>
+                                    <div>
 								</header>
 
-                                <span class="location">
-                                    <span class="fa fa-map-marker"></span>
-                                    <span class="city">
-                                        Salerno,
-                                    </span>
-                                    <span class="region">
-                                      Italy
-                                    </span>
-                                </span>
-                                <span class="website">
-                                    <a href="http://www.bvnetworks.it">http://www.bvnetworks.it</a>
-                                </span>
 
-								<ul class="keywords">
-									<li>JavaScript</li>
-									<li>jQuery</li>
-									<li>PHP</li>
-									<li>HTML</li>
-									<li>CSS</li>
-								</ul>
 
 								<div class="item display none" style="opacity:0">
 									<div class="summary">
-										<p>Development of e-commerce solutions for small companies.</p>
+										<p>Ingénierie pour un projet de liasons de données tactiques au sein d&#x27;une équipe agile</p>
 									</div>
 									<ul class="highlights">
-											<li>Design and Development of Wordpress and Magento themes.</li>
+											<li>      Spécification, conception, tests, codage de récits fonctionnels et métiers</li>
 									</ul>
+							</div>
+								<header>
+                                    <div>
+    									<span class="space-left">
+    											<span class="fa fa-caret-right"></span>
+    									</span>
+    									<div class="position">
+    										Développeur
+    									</div>
+    									<div class="company">
+    										Thales Communications &amp; Security
+    									</div>
+                                    </div>
+
+                                    <div>
+    									<div class="date">
+    										<span class="startDate">
+    											February 2007
+    										</span>
+    										<span class="endDate">
+    											- August 2007
+    										</span>
+    									</div>
+                                    <div>
+								</header>
+
+
+
+								<div class="item display none" style="opacity:0">
+									<div class="summary">
+										<p>Stage conventionné pour un projet de liasons de données tactiques au sein d&#x27;une équipe agile</p>
+									</div>
+									<ul class="highlights">
+											<li>Spécification, conception, tests, codage de récits métiers : mise en place d&#x27;outils de tests et de génération de code</li>
+									</ul>
+							</div>
+								<header>
+                                    <div>
+    									<span class="space-left">
+    											<span class="fa fa-caret-right"></span>
+    									</span>
+    									<div class="position">
+    										Développeur
+    									</div>
+    									<div class="company">
+    										Sentinelbox
+    									</div>
+                                    </div>
+
+                                    <div>
+    									<div class="date">
+    										<span class="startDate">
+    											February 2006
+    										</span>
+    										<span class="endDate">
+    											- June 2006
+    										</span>
+    									</div>
+                                    <div>
+								</header>
+
+
+
+								<div class="item display none" style="opacity:0">
+									<div class="summary">
+										<p>Stage conventionné pour un projet de boîtier offrant plusieurs services de sécurité</p>
+									</div>
+							</div>
+								<header>
+                                    <div>
+    									<span class="space-left">
+    											<span class="fa fa-caret-right"></span>
+    									</span>
+    									<div class="position">
+    										Développeur
+    									</div>
+    									<div class="company">
+    										Free&amp;AlterSoft
+    									</div>
+                                    </div>
+
+                                    <div>
+    									<div class="date">
+    										<span class="startDate">
+    											February 2005
+    										</span>
+    										<span class="endDate">
+    											- June 2005
+    										</span>
+    									</div>
+                                    <div>
+								</header>
+
+
+
+								<div class="item display none" style="opacity:0">
+									<div class="summary">
+										<p>Stage conventionné au sein d&#x27;une société de services en logiciels libres (SSLL)</p>
+									</div>
 							</div>
 					</section>
 				</section>
@@ -1040,7 +1058,7 @@ ul.courses li:hover {
 
 				<section class="section">
 					<header>
-						<h2 class='section-title'>Education <span class="item-count">(2)</span></h2>
+						<h2 class='section-title'>Formation <span class="item-count">(2)</span></h2>
 					</header>
 					<section id="education">
 							<header class="clear">
@@ -1048,14 +1066,11 @@ ul.courses li:hover {
 										<span class="fa fa-caret-down"></span>
 								</span>
 								<div class="header-left">
-										<div class="studyType">
-											MSc
-										</div>
 										<div class="area">
-											Software Engineering
+											Formations internes
 										</div>
 										<div class="institution">
-											Università degli Studi di Salerno
+											Thales University - Johns Hopkins University
 										</div>
 								</div>
 								<div class="date">
@@ -1063,40 +1078,19 @@ ul.courses li:hover {
 										2012
 									</span>
 									<span class="endDate">
-										- 2014
+										- 2015
 									</span>
 								</div>
 							</header>
 
-								<span class="location">
-									<span class="fa fa-map-marker"></span>
-										<span class="city">
-											Salerno,
-										</span>
-										<span class="region">
-											Italy
-										</span>
-								</span>
 
                 <ul class="courses">
-                    <li>Project Management</li>
-                    <li>Web Engineering</li>
-                    <li>Software Engineering</li>
-                    <li>UML</li>
-                    <li>Data Analysis</li>
-                    <li>Computer Forensics</li>
-                    <li>Data Integration</li>
-                    <li>Advanced Algorithm</li>
-                    <li>Compilers</li>
+                    <li>Methodes agiles (avancé)</li>
+                    <li>Design Pattern et POO Java</li>
+                    <li>Data Science (github.com/myhoang)</li>
                 </ul>
 
 								<div class="item display" style="opacity:1">
-									<div class='gpa'>
-										<strong> Grade:</strong> <span>Summa cum Laude</span>
-									</div>
-									<div class="summary">
-										<p>The Master Thesis was mainly engaged in web-based Data Visualisation techniques, usability test of state of art tools and development of a Data Visualisation module. The module has been developed for an ETH Spin off.</p>
-									</div>
 							</div>
 							<header class="clear">
 								<span class="space-left">
@@ -1104,147 +1098,68 @@ ul.courses li:hover {
 								</span>
 								<div class="header-left">
 										<div class="studyType">
-											BSc
+											Master
 										</div>
 										<div class="area">
-											Computer Science
+											Informatique des Systèmes Embarqués (ISE)
 										</div>
 										<div class="institution">
-											Università degli Studi di Salerno
+											Université Paris 8 Vincennes - Saint-Denis
 										</div>
 								</div>
 								<div class="date">
 									<span class="startDate">
-										2005
+										2002
 									</span>
 									<span class="endDate">
-										- 2010
+										- 2007
 									</span>
 								</div>
 							</header>
 
-								<span class="location">
-									<span class="fa fa-map-marker"></span>
-										<span class="city">
-											Salerno,
-										</span>
-										<span class="region">
-											Italy
-										</span>
-								</span>
 
-                <ul class="courses">
-                    <li>Databases</li>
-                    <li>Procedural Programming</li>
-                    <li>Object Oriented Programming</li>
-                    <li>Web Development</li>
-                    <li>Marketing</li>
-                </ul>
 
 								<div class="item display none" style="opacity:0">
-									<div class='gpa'>
-										<strong> Grade:</strong> <span>100/110</span>
-									</div>
 							</div>
 					</section>
 				</section>
 
-				<section class="section">
-					<header>
-						<h2 class='section-title'>Awards</h2>
-					</header>
-					<section id="awards">
-						<header class="clear">
-							<span class="space-left">
-									<span class="fa fa-caret-down"></span>
-							</span>
-							<div class="header-left">
-									<div class="title">
-										Erasmus Scholarship
-									</div>
-									<div class="awarder">
-										Università degli Studi di Salerno
-									</div>
-							</div>
-								<div class="date">
-									2008
-								</div>
-						</header>
-							<div class="item display" style="opacity:1">
-								<div class="summary">
-									<p>Six months full Erasmus Scholarship at University of Portsmouth. I was studying abroad for the first time and I has the opportunity to meet people from all over the world.</p>
-								</div>
-						</div>
-						<header class="clear">
-							<span class="space-left">
-									<span class="fa fa-caret-right"></span>
-							</span>
-							<div class="header-left">
-									<div class="title">
-										Erasmus Traineeship Scholarship
-									</div>
-									<div class="awarder">
-										Università degli Studi di Salerno
-									</div>
-							</div>
-								<div class="date">
-									2014
-								</div>
-						</header>
-							<div class="item display none" style="opacity:0">
-								<div class="summary">
-									<p>Four months full Erasmus placement Scholarship at YouRehab AG (Zürich, CH).</p>
-								</div>
-						</div>
-					</section>
-				</section>
 
 
 				<section class="section margin1">
 					<header>
-						<h2 class='section-title'>Languages</h2>
+						<h2 class='section-title'>Langages</h2>
 					</header>
-					<section id="languages">
+					<section id="languages" class="languages ">
 							<div class="display">
 										<h3 class="language">
-											Italian
+											Français
 										</h3>
 								<div class="item">
-										<div class="level fluency native speaker">
-											<em>Native speaker</em>
+										<div class="level fluency langue maternelle">
+											<em>Langue maternelle</em>
 											<div class="bar"></div>
 										</div>
 								</div>
 							</div>
 							<div class="display">
 										<h3 class="language">
-											English
+											Vietnamien
 										</h3>
 								<div class="item">
-										<div class="level fluency fluent">
-											<em>Fluent</em>
+										<div class="level fluency langue maternelle">
+											<em>Langue maternelle</em>
 											<div class="bar"></div>
 										</div>
 								</div>
 							</div>
 							<div class="display">
 										<h3 class="language">
-											Spanish
+											Anglais
 										</h3>
 								<div class="item">
-										<div class="level fluency beginner">
-											<em>Beginner</em>
-											<div class="bar"></div>
-										</div>
-								</div>
-							</div>
-							<div class="display">
-										<h3 class="language">
-											German
-										</h3>
-								<div class="item">
-										<div class="level fluency beginner">
-											<em>Beginner</em>
+										<div class="level fluency courant">
+											<em>Courant</em>
 											<div class="bar"></div>
 										</div>
 								</div>
@@ -1252,37 +1167,6 @@ ul.courses li:hover {
 					</section>
 				</section>
 
-				<section class="section margin1">
-					<header>
-						<h2 class='section-title' class='section-title'>Interests</h2>
-					</header>
-					<section id="interests">
-							<div class="item">
-									<h3 class="name">
-										Psychology
-									</h3>
-								<div class="summary">
-									<p></p>
-								</div>
-							</div>
-							<div class="item">
-									<h3 class="name">
-										Cooking
-									</h3>
-								<div class="summary">
-									<p></p>
-								</div>
-							</div>
-							<div class="item">
-									<h3 class="name">
-										SSC Napoli
-									</h3>
-								<div class="summary">
-									<p></p>
-								</div>
-							</div>
-					</section>
-				</section>
 
 		</div>
 		<script>

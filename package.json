@@ -1,15 +1,50 @@
 {
-  "name": "jsonresume-theme-stackoverflow",
-  "version": "0.2.0",
-  "description": "Stack Overflow theme for JSON Resume",
-  "author": "Francesco Esposito <http://fran.cesco.io>",
+  "name": "jsonresume-theme-depassementdepile",
+  "version": "0.2.2",
+  "description": "Stack Overflow JSON Resume en français",
+  "author": {
+    "name": "My Hoang",
+    "email": "my.hoang.fr@gmail.com"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/francescoes/jsonresume-theme-stackoverflow"
+    "url": "git+https://github.com/myhoang/jsonresume-theme-depassementdepile.git"
   },
   "license": "MIT",
   "dependencies": {
     "handlebars": "^2.0.0-alpha.4",
     "moment": "^2.10.6"
-  }
+  },
+  "gitHead": "32e5222aa34fddbb297dacf7e0148997ed9acef5",
+  "bugs": {
+    "url": "https://github.com/myhoang/jsonresume-theme-depassementdepile/issues"
+  },
+  "homepage": "https://github.com/myhoang/jsonresume-theme-depassementdepile#readme",
+  "_id": "jsonresume-theme-depassementdepile@0.2.2",
+  "scripts": {},
+  "_shasum": "045d8e2f9adab27ddc5a5a9972d52df54603131a",
+  "_from": "jsonresume-theme-depassementdepile@*",
+  "_npmVersion": "2.11.3",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "name": "myhoang",
+    "email": "my.hoang.fr@gmail.com"
+  },
+  "dist": {
+    "shasum": "045d8e2f9adab27ddc5a5a9972d52df54603131a",
+    "tarball": "http://registry.npmjs.org/jsonresume-theme-depassementdepile/-/jsonresume-theme-depassementdepile-0.2.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "francescoes",
+      "email": "fraesps@gmail.com"
+    },
+    {
+      "name": "myhoang",
+      "email": "my.hoang.fr@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/jsonresume-theme-depassementdepile/-/jsonresume-theme-depassementdepile-0.2.2.tgz",
+  "readme": "ERROR: No README data found!"
 }

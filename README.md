@@ -1,10 +1,10 @@
 # Stack Overflow theme for jsonresume [![npm version](https://badge.fury.io/js/jsonresume-theme-stackoverflow.svg)](http://badge.fury.io/js/jsonresume-theme-stackoverflow)
 
-This is a theme for JSON Resume. It is available via npm:
+This is a theme for JSON Resume in french. It is available via npm:
 ```
 npm install jsonresume-theme-stackoverflow
 ```
-[DEMO](https://themes.jsonresume.org/stackoverflow)
+[DEMO](https://themes.jsonresume.org/depassementdepile)
 
 **Printable version with custom CSS**
 
@@ -64,7 +64,7 @@ Press ctrl-c to stop
 
 ## Contribution
 
-[Open an issue](https://github.com/francescoes/jsonresume-theme-stackoverflow/issues/new) or fork the project, add your feature (or fix your bug) 
+[Open an issue](https://github.com/francescoes/jsonresume-theme-depassementdepile/issues/new) or fork the project, add your feature (or fix your bug) 
 and open a pull request 
 
 ## License
