@@ -58,7 +58,7 @@ body, html {
     color: #40484f;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 1.46153846;
+    line-height: 1.35;
     text-align: left;
     webkit-text-size-adjust: 100%;
 }
@@ -80,7 +80,7 @@ ul {
 li {
     list-style-type: square;
     list-style-position: outside;
-    margin-left: 1.3em;
+    margin-left: 1.35em;
 }
 
 h1 {
@@ -88,11 +88,11 @@ h1 {
 }
 
 h2 {
-    font-size: 1.67rem;
+    font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 1.27rem;
+    font-size: 1.25rem;
 }
 
 em {
@@ -150,7 +150,7 @@ section .location {
 }
 
 .header > div {
-    line-height: 1.5;
+    line-height: 1.35;
 }
 
 .header > div > div {
@@ -158,7 +158,7 @@ section .location {
 }
 
 .header h1.name {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: 100;
     line-height: 100%;
 }
@@ -174,7 +174,7 @@ section .location {
     float: right;
   border-radius: 50%;
   overflow: hidden;
-  padding: 5px;
+  padding: 1px;
   display: inline-block;
 }
 
@@ -224,7 +224,7 @@ h2.section-title {
 }
 
 .section > section > header {
-    font-size: 1.38rem;
+    font-size: 1.35rem;
     position: relative;
     margin-top: .7em;
 }
@@ -258,9 +258,12 @@ h2.section-title {
 .studyType,
 .area,
 .title,
-.language,
 .name {
     font-weight: 600;
+}
+
+.language {
+    font-weight: 400;
 }
 
 .company::before,
@@ -294,12 +297,12 @@ ul.keywords li,
 ul.courses li {
     display: inline-block;
     margin: 2px 2px 2px 0;
-    padding: 4px 5px 5px;
+    padding: 4px 4px 4px;
     font-size: .9rem;
     line-height: 1;
     text-transform: lowercase;
     color: #3e6d8e;
-    background-color: #dfeaf1;
+    /*background-color: #dfeaf1;*/
     border: 0 solid #dfeaf1;
     white-space: nowrap;
 }
@@ -560,7 +563,7 @@ ul.courses li:hover {
         padding: 0;
         -ms-word-wrap: break-word;
         word-wrap: break-word;
-        line-height: 1.4;
+        line-height: 1.35;
         /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
     }
 
@@ -626,19 +629,19 @@ ul.courses li:hover {
     ul.courses li {
         margin: 0;
         padding: 0;
-        font-size: .8rem;
+        font-size: 1.0rem;
         text-transform: lowercase;
     }
 
     ul.keywords li::after,
     ul.courses li::after {
-        padding: 0 0 0 .1rem;
+        padding: 0 0 0 0rem;
         content: " |";
     }
 
     ul.keywords::before,
     ul.courses::before {
-        font-size: .8rem;
+        font-size: .9rem;
         font-weight: 600;
     }
 
@@ -656,7 +659,7 @@ ul.courses li:hover {
     }
 
     ul.courses::before {
-        content: "Cours: ";
+        content: "";
     }
 
     ul.keywords li:last-of-type::after,

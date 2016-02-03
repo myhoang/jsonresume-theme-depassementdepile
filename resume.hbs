@@ -20,11 +20,13 @@
 						<div class="middle">
 							<h1 class="name">{{name}}</h1>
 							<h2 class="label">{{label}}</h2>
+							<h2 class="label">{{wish}}</h2>
 						</div>
 					{{else}}
 						<div>
 							<h1 class="name">{{name}}</h1>
 							<h2 class="label">{{label}}</h2>
+							<h2 class="label">{{wish}}</h2>
 						</div>
 					{{/if}}
 
@@ -68,16 +70,16 @@
 							<a target="_blank" href="{{website}}">{{website}}</a>
 						</div>
 						{{/if}}
-						{{#if email}}
-						<div class="email">
-              <span class="fa fa-envelope-o"></span>
-							<a href="mailto:{{email}}">{{email}}</a>
-						</div>
-						{{/if}}
 						{{#if phone}}
 						<div class="phone">
               <span class="fa fa-mobile"></span>
 							{{phone}}
+						</div>
+						{{/if}}
+						{{#if email}}
+						<div class="email">
+              <span class="fa fa-envelope-o"></span>
+							<a href="mailto:{{email}}">{{email}}</a>
 						</div>
 						{{/if}}
 					</div>
